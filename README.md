@@ -1,16 +1,16 @@
 # info-keeper
 A learning based react app with context api (later will be transformed into general purpose as info-keeper)
 
-### `git clone {...}`
+`git clone {...}`
 
-### `cd info-keeper/client`
+`cd info-keeper/client`
 
-### `npm install`
+`npm install`
 
-### `cd ..`
+`cd ..`
 
-### `configure ./config/default.json`
+`configure ./config/default.json`
 
-### `npm install`
+`npm install`
 
-### `npm run dev`
+`npm run dev`
