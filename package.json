@@ -1,6 +1,6 @@
 {
-  "name": "contact-keeper",
-  "version": "1.0.0",
+  "name": "info-keeper",
+  "version": "1.0.1",
   "description": "A stage of learning React path.",
   "main": "server.js",
   "scripts": {
