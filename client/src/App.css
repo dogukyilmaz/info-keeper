@@ -9,6 +9,7 @@
   --danger-color: #dc3545;
   --success-color: #28a745;
   --purple-color: #7600a3;
+  --lightsuccess-color: #baffb8;
 }
 
 * {
@@ -24,6 +25,16 @@ body {
   line-height: 1.6;
   background-color: #fff;
   color: #333;
+}
+
+.todo-item i {
+  font-size: large;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.todo-tick i {
+  font-size: 30px !important  ;
 }
 
 a {
@@ -81,6 +92,10 @@ img {
   color: var(--purple-color);
 }
 
+.text-success {
+  color: var(--success-color);
+}
+
 .text-dark {
   color: var(--dark-color);
 }
@@ -102,6 +117,7 @@ img {
   padding: 1rem;
   border: #ccc 1px dotted;
   margin: 0.7rem 0;
+  /* font-family: Montserrat; */
 }
 
 /* List */
@@ -287,6 +303,14 @@ img {
   color: #fff;
 }
 
+.btn-lightsuccess,
+.bg-lightsuccess,
+.badge-lightsuccess,
+.alert-lightsuccess {
+  background: var(--lightsuccess-color);
+  color: #000;
+}
+
 .btn-white,
 .bg-white,
 .badge-white,
@@ -312,7 +336,30 @@ img {
 /* Forms */
 input {
   margin: 1.2rem 0;
+  border-radius: 10px;
+  outline-style: none;
+  transition: .3s ease-in-out;
 }
+input:focus {
+  border-radius: 10px !important;
+}
+
+input:focus:invalid {
+  background: rgba(85, 14, 79, 0.44);
+  border: 1px black solid !important;
+}
+
+
+input:focus:valid {
+  background: rgba(78, 221, 42, 0.44);
+  border: 1px rgba(78, 221, 42, 0.44) solid !important;
+}
+
+
+/* input[required]:invalid::after,
+input[required]:valid::after {
+content: ‘not a chance’; */
+/* } */
 
 .form-text {
   display: block;

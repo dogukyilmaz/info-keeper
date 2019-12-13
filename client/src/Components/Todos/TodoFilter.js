@@ -1,13 +1,12 @@
 import React, { useContext, useRef, useEffect, useState } from 'react';
-import ContactContext from "../../Context/Contact/contactContext";
+import TodoContext from "../../Context/Todo/todoContext";
 
-const ContactFilter = () => {
-  const contactContext = useContext(ContactContext);
+const TodoFilter = () => {
+  const todoContext = useContext(TodoContext);
 
-  
   const [header, setHeader] = useState(" ");
 
-  const { filterContacts, clearFilter, filtered } = contactContext;
+  const { filterTodos, clearFilter, filtered } = todoContext;
 
   const input = useRef("");
 
@@ -15,11 +14,11 @@ const ContactFilter = () => {
     if(filtered === null) {
       input.current.value = "";
     }
-  }, [contactContext, filtered]);
+  }, [todoContext, filtered]);
 
   const handleChange = e => {
     if(input.current.value.trim() !== "") {
-      filterContacts(e.target.value);
+      filterTodos(e.target.value);
       setHeader(e.target.value);
     }
     else {
@@ -29,14 +28,14 @@ const ContactFilter = () => {
 
   return (
     <form>
-      <h2 className={filtered ? "text-purple" : "text-primary"}>{filtered ? `Filter: ${header}` : "Contacts"} </h2>
+      <h2 className={filtered ? "text-purple" : "text-primary"}>{filtered ? `Filter: ${header}` : "Todolar"} </h2>
       <input
         ref={input}
-        placeholder="Filter Contacts..."
+        placeholder="Filter Todos..."
         onChange={handleChange}
         type="text" />
     </form>
   )
 }
 
-export default ContactFilter;
+export default TodoFilter;
