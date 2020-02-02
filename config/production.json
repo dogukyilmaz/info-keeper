@@ -1,5 +1,0 @@
-{
-  "mongoURI": "mongodb+srv://info-keeper-admin:info.Keeper-13@info-keeper-app-20abk.mongodb.net/test?retryWrites=true&w=majority",
-  "mongoLocalURI": "mongodb://127.0.0.1:27017/info-keeper",
-  "jwtSecret": "diffrentJWTSecretSoWildy"
-}
